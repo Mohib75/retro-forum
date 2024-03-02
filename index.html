@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="winter">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,74 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="font-mulish">
+    <!-- navbar -->
+    <nav class="container mx-auto">
+        <div class="navbar px-4 lg:px-0 pt-8 justify-between">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="black">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#FF4240] text-white rounded-box w-52">
+                        <li data-tip="home"
+                            class="tooltip border-solid border-[1px] px-4 border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img src="./Assets/images/home.png" alt="home">
+                        </li>
+                        <li data-tip="tooltip"
+                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img src="./Assets/images/edit.png" alt="tooltip">
+                        </li>
+                        <li data-tip="profile"
+                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img src="./Assets/images/profile.png" alt="profile">
+                        </li>
+                        <li data-tip="flag"
+                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img src="./Assets/images/flag.png" alt="flag">
+                        </li>
+                    </ul>
+                </div>
+                <h1 class="text-2xl lg:text-4xl text-black font-extrabold leading-normal">ReTro
+            </div>
+
+            <div class="flex gap-8">
+                <div class="hidden lg:flex">
+                    <ul class="flex gap-4">
+                        <li data-tip="home"
+                            class="tooltip border-solid border-[1px] px-4 border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img src="./Assets/images/home.png" alt="home">
+                        </li>
+                        <li data-tip="tooltip"
+                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img src="./Assets/images/edit.png" alt="tooltip">
+                        </li>
+                        <li data-tip="profile"
+                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img src="./Assets/images/profile.png" alt="profile">
+                        </li>
+                        <li data-tip="flag"
+                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img src="./Assets/images/flag.png" alt="flag">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="flex items-center gap-8">
+                    <i class="fa-solid fa-magnifying-glass lg:block hidden"></i>
+                    <div
+                        class="btn bg-[#797DFC] rounded-[50px] px-8 text-white hover:scale-105 hover:bg-[#797DFC] transform transition-all duration-500 flex justify-center items-center">
+                        <p class="text-white">Sign in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
 </body>
 
