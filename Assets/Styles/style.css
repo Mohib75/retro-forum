@@ -3,3 +3,10 @@
 .font-mulish {
 	font-family: "Mulish", sans-serif;
 }
+
+.span-text {
+	background: #797dfc;
+	background: linear-gradient(to right, #797dfc 0%, #12132d 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
