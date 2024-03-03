@@ -90,7 +90,7 @@
                 <img src="./Assets/images/bgbanner.png" class="object-fill w-full" alt="banner">
             </div>
 
-            <div class="flex flex-col">
+            <div class="flex flex-col z-10">
                 <h3 class="text-6xl font-black text-white leading-[86px]">Welcome to the <br> <span
                         class="span-text">ReTro</span> Forum</h3>
                 <p class="text-[#ffffffcc] text-xl font-medium leading-9 my-8">Share your favorite opinion and win and
@@ -99,14 +99,20 @@
                     forum coffee mug!
                 </p>
 
-                <label class="input flex items-center gap-2 bg-white max-w-[400px] min-h-[56px] rounded-[50px]"
-                    id="coupon-field">
-                    <input type="text" class="grow" placeholder="Search here anything" id="coupon-code" />
-                    <button id="apply-btn" class="rounded-[46px] bg-[#797DFC] text-white p-2 px-8">Search</button>
+                <label
+                    class="input flex items-center gap-2 bg-white max-w-[400px] min-h-[56px] rounded-[50px] relative">
+                    <input id="search-box" type="text" class="grow focus:outline-none"
+                        placeholder="Search here anything" />
+                    <button onclick="handleSearch()" id="search-btn"
+                        class="rounded-[46px] bg-[#797DFC] text-white p-2 px-8">Search</button>
+                    <span class="loading loading-spinner text-primary w-12 absolute -right-16 hidden"
+                        id="loader"></span>
                 </label>
+
             </div>
 
-            <div class="bg-white rounded-[32px] grid grid-cols-1 p-12 min-w-[371px] min-h-[288px] text-[#12132DCC]">
+            <div
+                class="bg-white rounded-[32px] grid grid-cols-1 p-12 min-w-[371px] min-h-[288px] text-[#12132DCC] z-10">
                 <div class="flex justify-between items-center">
                     <p class="text-2xl font-medium leading-7">Registered Users</p>
                     <p class="text-2xl font-medium leading-7">01</p>
@@ -140,75 +146,26 @@
                 integrated testing features allow for a
                 streamlined .</p>
 
-            <div class="flex justify-between gap-8">
+            <div class="flex justify-between gap-8 relative">
+                <span
+                    class="loading loading-spinner text-primary w-48 absolute left-[50%] transform -translate-x-[50%] hidden"
+                    id="discuss-loader"></span>
                 <div class="grid grid-cols-1 gap-12" id="discuss-box">
-                    <div class="min-w-[900px] h-[270px] border-none rounded-3xl bg-[#797DFC1A] p-10">
-                        <div class="flex justify-between">
-                            <div class="bg-white min-w-[100px] h-[100px] rounded-2xl relative">
-                                <div
-                                    class="min-w-[18.7px] min-h-[18.7px] rounded-full border-none bg-[#10B981] absolute right-0 top-0">
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col">
-                                <div class="flex gap-8">
-                                    <p class="text-sm font-inter font-medium leading-4 text-[#12132DCC]"># Coding</p>
-                                    <p class="text-sm font-inter font-medium leading-4 text-[#12132DCC]">Author : Safia
-                                        Chowdhury</p>
-                                </div>
-                                <h4 class="text-xl text-black font-bold leading-6 mt-2">10 Kids Unaware of Their
-                                    Halloween
-                                    Costume</h4>
-                                <p class="text-[#12132D99] leading-6 font-inter my-4">It’s one thing to subject yourself
-                                    to
-                                    ha Halloween costume mishap because,<br> hey that’s your prerogative</p>
-
-                                <hr class="border-dashed h-[1px] bg-[#03071233] w-full my-4">
-
-                                <div class="flex justify-between items-center">
-                                    <div class="flex gap-8 items-center">
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
-                                            <img src="./Assets/images/comment.png" alt="comment">
-                                            <p>560</p>
-                                        </div>
-
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
-                                            <img src="./Assets/images/eye.png" alt="eye">
-                                            <p>1568</p>
-                                        </div>
-
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
-                                            <img src="./Assets/images/time.png" alt="time">
-                                            <p>5 min</p>
-                                        </div>
-                                    </div>
-
-                                    <img src="./Assets/images/submit.png" alt="submit">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
-                <div class="flex flex-col min-w-[370px] min-h-[100px] p-6 rounded-3xl bg-[#12132D0D]">
+                <div class="flex flex-col min-w-[370px] h-full p-6 rounded-3xl bg-[#12132D0D]">
                     <div class="flex justify-between items-center">
                         <h4 class="text-xl text-black font-bold leading-6 mt-2">Title</h4>
 
                         <div class="flex gap-2 items-center">
                             <img src="./Assets/images/mark.png" alt="mark">
                             <p class="text-sm font-inter font-medium leading-4 text-[#12132DCC]">Mark as read
-                                (<span>0</span>)</p>
+                                (<span id="mark-count">0</span>)</p>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 gap-8 mt-4" id="mark-box">
-                        <div class="bg-white rounded-2xl p-4 flex justify-between items-center">
-                            <h4 class="text-black font-semibold leading-6 mt-2">10 Kids Unaware of Their <br>
-                                Halloween
-                                Costume</h4>
-                            <img src="./Assets/images/eye.png" alt="eye">
-                            <p class="text-[#12132D99] font-inter leading-5">1568</p>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -240,7 +197,10 @@
             <div class="grid grid-cols-3 gap-6" id="latest-post-box">
                 <div
                     class="border-solid border-[1px] border-[#12132D26] rounded-3xl bg-white min-w-[374px] p-9 flex flex-col gap-4">
-                    <div class="min-w-[320px] min-h-[190px] bg-[#12132D0D] rounded-[20px]"></div>
+                    <div class="min-w-[320px] min-h-[190px] bg-[#12132D0D] rounded-[20px]">
+                        <img class="w-full h-full object-cover rounded-[20px]"
+                            src="https://i.ibb.co/VYGSkLz/pexels-jeshootscom-442576.jpg" alt="">
+                    </div>
 
                     <div class="flex gap-4 items-center text-[#12132D99] leading-5 ">
                         <img src="./Assets/images/date.png" alt="date">
@@ -256,7 +216,8 @@
 
                     <div class="flex gap-4">
                         <div class="w-[44px] h-[44px] rounded-full border-black border-solid border-[1px] self-end">
-                            <img src="./Assets/images/joinforum.png" alt="">
+                            <img class="w-full h-full object-cover rounded-full"
+                                src="https://i.ibb.co/z8zx95w/pexels-davide-de-giovanni-1649675.jpg" alt="">
                         </div>
 
                         <div class="flex flex-col gap-2 mt-4">
@@ -288,7 +249,7 @@
             <p class="font-light leading-5 text-[#12132D80] self-center">2017 &copy;All Rights Reserved.</p>
         </div>
     </footer>
-
+    <script src="./Assets/Js/main.js"></script>
 </body>
 
 </html>
