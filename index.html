@@ -30,21 +30,21 @@
                         </svg>
                     </div>
                     <ul tabindex="0"
-                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-[#FF4240] text-white rounded-box w-52">
+                        class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-[#fffbfb] text-white rounded-box w-52 z-20">
                         <li data-tip="home"
-                            class="tooltip border-solid border-[1px] px-4 border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
-                            <img src="./Assets/images/home.png" alt="home">
+                            class="w-[56px] h-[56px] border-solid border-[1px] self-center border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            <img class="w-[56px] h-[56px] object-cover" src="./Assets/images/home.png" alt="home">
                         </li>
-                        <li data-tip="tooltip"
-                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                        <li data-tip=""
+                            class="flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
                             <img src="./Assets/images/edit.png" alt="tooltip">
                         </li>
                         <li data-tip="profile"
-                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            class="flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
                             <img src="./Assets/images/profile.png" alt="profile">
                         </li>
                         <li data-tip="flag"
-                            class="tooltip border-solid border-[1px] border-[#0307121a] bg-[#0307121a] rounded-full flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
+                            class="flex justify-center items-center cursor-pointer hover:scale-105 transform transition-all duration-500">
                             <img src="./Assets/images/flag.png" alt="flag">
                         </li>
                     </ul>
@@ -85,49 +85,53 @@
     </nav>
     <!-- banner -->
     <header class="container mx-auto mt-20">
-        <div class="h-[550px] rounded-[32px] bg-[#12132D] relative flex gap-20 justify-center items-center">
+        <div
+            class="h-full lg:h-[550px] rounded-[32px] bg-[#12132D] relative flex flex-col gap-20 justify-center items-center pb-12 lg:pb-0 lg:flex-row mx-2 lg:mx-0 px-2 lg:px-0">
             <div class="absolute bottom-0 w-full">
                 <img src="./Assets/images/bgbanner.png" class="object-fill w-full" alt="banner">
             </div>
 
-            <div class="flex flex-col z-10">
-                <h3 class="text-6xl font-black text-white leading-[86px]">Welcome to the <br> <span
+            <div class="flex flex-col z-10 items-center">
+                <h3 class="text-3xl lg:text-6xl font-black text-white leading-[86px]">Welcome to the <br> <span
                         class="span-text">ReTro</span> Forum</h3>
-                <p class="text-[#ffffffcc] text-xl font-medium leading-9 my-8">Share your favorite opinion and win and
+                <p class="text-sm text-[#ffffffcc] lg:text-xl font-medium leading-9 my-8">Share your favorite opinion
+                    and
+                    win and
                     wp
                     <br>
                     forum coffee mug!
                 </p>
 
                 <label
-                    class="input flex items-center gap-2 bg-white max-w-[400px] min-h-[56px] rounded-[50px] relative">
+                    class="input flex items-center gap-2 bg-white lg:max-w-[400px] min-h-[56px] rounded-[50px] relative text-xs lg:text-lg">
                     <input id="search-box" type="text" class="grow focus:outline-none"
                         placeholder="Search here anything" />
                     <button onclick="handleSearch()" id="search-btn"
-                        class="rounded-[46px] bg-[#797DFC] text-white p-2 px-8">Search</button>
-                    <span class="loading loading-spinner text-primary w-12 absolute -right-16 hidden"
+                        class="rounded-[46px] bg-[#797DFC] text-white p-2 px-6 lg:px-8">Search</button>
+                    <span
+                        class="loading loading-spinner text-primary w-12 absolute -bottom-16 left-24 lg lg:-right-16 hidden"
                         id="loader"></span>
                 </label>
 
             </div>
 
             <div
-                class="bg-white rounded-[32px] grid grid-cols-1 p-12 min-w-[371px] min-h-[288px] text-[#12132DCC] z-10">
-                <div class="flex justify-between items-center">
-                    <p class="text-2xl font-medium leading-7">Registered Users</p>
-                    <p class="text-2xl font-medium leading-7">01</p>
+                class="bg-white rounded-[32px] grid grid-cols-1 p-12 lg:min-w-[371px] lg:min-h-[288px] text-[#12132DCC] z-10">
+                <div class="flex justify-between items-center gap-4 text-base lg:text-2xl font-medium leading-7">
+                    <p>Registered Users</p>
+                    <p>01</p>
                 </div>
-                <div class="flex justify-between items-center">
-                    <p class="text-2xl font-medium leading-7">Forum</p>
-                    <p class="text-2xl font-medium leading-7">05</p>
+                <div class="flex justify-between items-center gap-4 text-base lg:text-2xl font-medium leading-7">
+                    <p>Forum</p>
+                    <p>05</p>
                 </div>
-                <div class="flex justify-between items-center">
-                    <p class="text-2xl font-medium leading-7">Topics</p>
-                    <p class="text-2xl font-medium leading-7">01</p>
+                <div class="flex justify-between items-center gap-4 text-base lg:text-2xl font-medium leading-7">
+                    <p>Topics</p>
+                    <p>01</p>
                 </div>
-                <div class="flex justify-between items-center">
-                    <p class="text-2xl font-medium leading-7">Replies</p>
-                    <p class="text-2xl font-medium leading-7">01</p>
+                <div class="flex justify-between items-center gap-4 text-base lg:text-2xl font-medium leading-7">
+                    <p>Replies</p>
+                    <p>01</p>
                 </div>
             </div>
         </div>
@@ -136,9 +140,10 @@
     <main class="container mx-auto">
         <!-- discuss section -->
         <section class="flex flex-col mt-20">
-            <h2 class="text-4xl font-black leading-[50px] text-center text-black">Let’s Discuss</h2>
+            <h2 class="text-2xl lg:text-4xl font-black leading-[50px] text-center text-black">Let’s Discuss</h2>
 
-            <p class="self-center text-center max-w-[691px] text-[#12132D99] text-lg leading-8 my-8">Yes, you can run
+            <p class="self-center text-center max-w-[691px] text-[#12132D99] text-base lg:text-lg leading-8 my-8">Yes,
+                you can run
                 unit
                 tests and view the results directly
                 within the
@@ -146,16 +151,16 @@
                 integrated testing features allow for a
                 streamlined .</p>
 
-            <div class="flex justify-between gap-8 relative">
+            <div class="flex flex-col justify-center gap-8 relative lg:flex-row lg:justify-between">
                 <span
                     class="loading loading-spinner text-primary w-48 absolute left-[50%] transform -translate-x-[50%] hidden"
                     id="discuss-loader"></span>
-                <div class="grid grid-cols-1 gap-12" id="discuss-box">
+                <div class="grid grid-cols-1 gap-12 p-4 lg:p-0" id="discuss-box">
                 </div>
 
-                <div class="flex flex-col min-w-[370px] h-full p-6 rounded-3xl bg-[#12132D0D]">
+                <div class="flex flex-col lg:min-w-[370px] h-full p-6 rounded-3xl bg-[#12132D0D] mx-4 lg:mx-0">
                     <div class="flex justify-between items-center">
-                        <h4 class="text-xl text-black font-bold leading-6 mt-2">Title</h4>
+                        <h4 class="text-base lg:text-xl text-black font-bold leading-6 mt-2">Title</h4>
 
                         <div class="flex gap-2 items-center">
                             <img src="./Assets/images/mark.png" alt="mark">
@@ -172,14 +177,16 @@
         </section>
 
         <!-- forum -->
-        <section class="bg-[#12132D] min-h-[410px] flex gap-8 justify-center items-center py-20 rounded-[32px] mt-20">
-            <div class="flex flex-col gap-8">
-                <h2 class="text-4xl font-black leading-[50px] text-white">Join Our Forum</h2>
-                <p class="text-lg leading-7 text-[#FFFFFFCC] ">Share your favorite opinion and win and wp forum coffee
+        <section
+            class="bg-[#12132D] min-h-[410px] flex flex-col gap-8 justify-center items-center py-20 rounded-[32px] mt-20 lg:flex-row mx-4 lg:mx-0">
+            <div class="flex flex-col gap-12 items-center lg:items-start lg:gap-8 p-4 lg:p-0">
+                <h2 class="text-2xl lg:text-4xl font-black leading-[50px] text-white">Join Our Forum</h2>
+                <p class="text-sm lg:text-lg leading-7 text-[#FFFFFFCC] ">Share your favorite opinion and win and wp
+                    forum coffee
                     mug! Yes, you can <br> run unit tests and view the results directly
                     within the app.</p>
                 <button
-                    class=" bg-[#797DFC] max-w-[220px] text-white py-4 rounded-[50px] flex justify-center items-center text-xl font-bold leading-6">Registered
+                    class=" bg-[#797DFC] px-6 lg:max-w-[220px] text-white py-4 rounded-[50px] flex justify-center items-center text-base lg:text-xl font-bold leading-6">Registered
                     Now</button>
             </div>
 
@@ -188,44 +195,14 @@
 
         <!-- latest post -->
         <section class="mt-20 flex flex-col">
-            <h2 class="text-4xl font-black leading-[50px] text-center text-black">Latest Posts</h2>
+            <h2 class="text-2xl lg:text-4xl font-black leading-[50px] text-center text-black">Latest Posts</h2>
 
-            <p class="self-center text-center max-w-[691px] text-[#12132D99] text-lg leading-8 my-8">Yes, you can run
+            <p class="self-center text-center max-w-[691px] text-[#12132D99] text-sm lg:text-lg leading-8 my-8">Yes, you
+                can run
                 unit tests and view the results directly within the app. The integrated testing features allow for a
                 streamlined .</p>
 
-            <div class="grid grid-cols-3 gap-6" id="latest-post-box">
-                <div
-                    class="border-solid border-[1px] border-[#12132D26] rounded-3xl bg-white min-w-[374px] p-9 flex flex-col gap-4">
-                    <div class="min-w-[320px] min-h-[190px] bg-[#12132D0D] rounded-[20px]">
-                        <img class="w-full h-full object-cover rounded-[20px]"
-                            src="https://i.ibb.co/VYGSkLz/pexels-jeshootscom-442576.jpg" alt="">
-                    </div>
-
-                    <div class="flex gap-4 items-center text-[#12132D99] leading-5 ">
-                        <img src="./Assets/images/date.png" alt="date">
-                        <p>29 January 2024</p>
-                    </div>
-
-                    <h4 class="text-black font-extrabold leading-7 text-lg">What will a mars habitat force that impact
-                        in our
-                        daily life!!!</h4>
-
-                    <p class="text-[#12132D99] leading-6">Yes, you can run unit tests and view the results
-                        directly within the app.</p>
-
-                    <div class="flex gap-4">
-                        <div class="w-[44px] h-[44px] rounded-full border-black border-solid border-[1px] self-end">
-                            <img class="w-full h-full object-cover rounded-full"
-                                src="https://i.ibb.co/z8zx95w/pexels-davide-de-giovanni-1649675.jpg" alt="">
-                        </div>
-
-                        <div class="flex flex-col gap-2 mt-4">
-                            <h4 class="text-black font-bold leading-5">Cameron Williamson</h4>
-                            <p class="text-[#12132D99] text-sm leading-4">Unknown</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-3 self-center mx-4 lg:mx-0" id="latest-post-box">
             </div>
         </section>
     </main>

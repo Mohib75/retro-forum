@@ -10,9 +10,9 @@ const loadAllPost = async () => {
 		// remove the loader
 		loader.classList.add("hidden")
 		const div = document.createElement("div")
-		div.innerHTML = `<div class="min-w-[900px] h-[270px] border-none rounded-3xl bg-[#797DFC1A] p-10">
-                        <div class="flex justify-between">
-                            <div class="bg-white min-w-[100px] h-[100px] rounded-2xl relative">
+		div.innerHTML = `<div class="lg:min-w-[900px] lg:h-[270px] border-none rounded-3xl bg-[#797DFC1A] p-4 lg:p-10">
+                        <div class="flex flex-col items-center lg:flex-row lg:justify-between ">
+                            <div class="bg-white min-w-[100px] lg:h-[100px] rounded-2xl relative">
                                 <div
                                     class="min-w-[18.7px] min-h-[18.7px] rounded-full border-none ${
 										post.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"
@@ -22,29 +22,29 @@ const loadAllPost = async () => {
                                     src=${post.image} alt="">
                             </div>
 
-                            <div class="flex flex-col w-[70%]">
-                                <div class="flex gap-8">
-                                    <p class="text-sm font-inter font-medium leading-4 text-[#12132DCC]"># ${post.category}</p>
-                                    <p class="text-sm font-inter font-medium leading-4 text-[#12132DCC]">Author : ${post.author.name}</p>
+                            <div class="flex flex-col lg:w-[70%] mt-2 gap-2 lg:gap-0">
+                                <div class="flex gap-6 lg:gap-8 text-sm font-inter font-medium leading-4 text-[#12132DCC]">
+                                    <p># ${post.category}</p>
+                                    <p>Author : ${post.author.name}</p>
                                 </div>
                                 <h4 class="text-xl text-black font-bold leading-6 mt-2">${post.title}</h4>
                                 <p class="text-[#12132D99] leading-6 font-inter my-4">${post.description}</p>
 
                                 <hr class="border-dashed h-[1px] bg-[#03071233] w-full my-4">
 
-                                <div class="flex justify-between items-center">
-                                    <div class="flex gap-8 items-center">
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
+                                <div class="flex flex-col lg:flex-row lg:justify-between items-center gap-4">
+                                    <div class="flex gap-4 lg:gap-8 items-center text-sm">
+                                        <div class="flex gap-2 lg:gap-4 items-center text-[#12132D99] font-inter leading-5 ">
                                             <img src="./Assets/images/comment.png" alt="comment">
                                             <p>${post.comment_count}</p>
                                         </div>
 
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
+                                        <div class="flex gap-2 lg:gap-4 items-center text-[#12132D99] font-inter leading-5 ">
                                             <img src="./Assets/images/eye.png" alt="eye">
                                             <p>${post.view_count}</p>
                                         </div>
 
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
+                                        <div class="flex gap-2 lg:gap-4 items-center text-[#12132D99] font-inter leading-5 ">
                                             <img src="./Assets/images/time.png" alt="time">
                                             <p>${post.posted_time} min</p>
                                         </div>
@@ -73,9 +73,9 @@ const loadPostByCategory = async (category) => {
 	posts.forEach((post) => {
 		loader.classList.add("hidden")
 		const div = document.createElement("div")
-		div.innerHTML = `<div class="min-w-[900px] h-[270px] border-none rounded-3xl bg-[#797DFC1A] p-10">
-                        <div class="flex justify-between">
-                            <div class="bg-white min-w-[100px] h-[100px] rounded-2xl relative">
+		div.innerHTML = `<div class="lg:min-w-[900px] lg:h-[270px] border-none rounded-3xl bg-[#797DFC1A] p-4 lg:p-10">
+                        <div class="flex flex-col items-center lg:flex-row lg:justify-between ">
+                            <div class="bg-white min-w-[100px] lg:h-[100px] rounded-2xl relative">
                                 <div
                                     class="min-w-[18.7px] min-h-[18.7px] rounded-full border-none ${
 										post.isActive ? "bg-[#10B981]" : "bg-[#FF3434]"
@@ -85,29 +85,29 @@ const loadPostByCategory = async (category) => {
                                     src=${post.image} alt="">
                             </div>
 
-                            <div class="flex flex-col w-[70%]">
-                                <div class="flex gap-8">
-                                    <p class="text-sm font-inter font-medium leading-4 text-[#12132DCC]"># ${post.category}</p>
-                                    <p class="text-sm font-inter font-medium leading-4 text-[#12132DCC]">Author : ${post.author.name}</p>
+                            <div class="flex flex-col lg:w-[70%] mt-2 gap-2 lg:gap-0">
+                                <div class="flex gap-6 lg:gap-8 text-sm font-inter font-medium leading-4 text-[#12132DCC]">
+                                    <p># ${post.category}</p>
+                                    <p>Author : ${post.author.name}</p>
                                 </div>
                                 <h4 class="text-xl text-black font-bold leading-6 mt-2">${post.title}</h4>
                                 <p class="text-[#12132D99] leading-6 font-inter my-4">${post.description}</p>
 
                                 <hr class="border-dashed h-[1px] bg-[#03071233] w-full my-4">
 
-                                <div class="flex justify-between items-center">
-                                    <div class="flex gap-8 items-center">
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
+                                <div class="flex flex-col lg:flex-row lg:justify-between items-center gap-4">
+                                    <div class="flex gap-4 lg:gap-8 items-center text-sm">
+                                        <div class="flex gap-2 lg:gap-4 items-center text-[#12132D99] font-inter leading-5 ">
                                             <img src="./Assets/images/comment.png" alt="comment">
                                             <p>${post.comment_count}</p>
                                         </div>
 
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
+                                        <div class="flex gap-2 lg:gap-4 items-center text-[#12132D99] font-inter leading-5 ">
                                             <img src="./Assets/images/eye.png" alt="eye">
                                             <p>${post.view_count}</p>
                                         </div>
 
-                                        <div class="flex gap-4 items-center text-[#12132D99] font-inter leading-5 ">
+                                        <div class="flex gap-2 lg:gap-4 items-center text-[#12132D99] font-inter leading-5 ">
                                             <img src="./Assets/images/time.png" alt="time">
                                             <p>${post.posted_time} min</p>
                                         </div>
@@ -134,8 +134,8 @@ const loadLatestPost = async () => {
 	posts.forEach((post) => {
 		const div = document.createElement("div")
 		div.innerHTML = `<div
-                    class="border-solid border-[1px] border-[#12132D26] rounded-3xl bg-white min-w-[374px] p-9 flex flex-col gap-4">
-                    <div class="min-w-[320px] min-h-[190px] bg-[#12132D0D] rounded-[20px]">
+                    class="border-solid border-[1px] border-[#12132D26] rounded-3xl bg-white lg:min-w-[374px] p-9 flex flex-col gap-4">
+                    <div class="lg:min-w-[320px] min-h-[190px] bg-[#12132D0D] rounded-[20px]">
                         <img class="w-full h-full object-cover rounded-[20px]"
                             src=${post.cover_image} alt="">
                     </div>
@@ -172,10 +172,12 @@ const addToMark = (title, view_count) => {
 	markCount.innerHTML = count
 	const titleContainer = document.getElementById("mark-box")
 	const div = document.createElement("div")
-	div.innerHTML = `<div class="bg-white rounded-2xl p-4 flex justify-between items-center">
+	div.innerHTML = `<div class="bg-white rounded-2xl p-4 flex flex-col lg:flex-row lg:justify-between items-center">
 	                        <h4 class="text-black font-semibold leading-6 mt-2 w-[191px]">${title}</h4>
+                            <div class="flex gap-4 mt-2 lg:mt-0 items-center">
 	                        <img src="./Assets/images/eye.png" alt="eye">
 	                        <p class="text-[#12132D99] font-inter leading-5">${view_count}</p>
+                            </div>
 	                    </div>`
 	titleContainer.appendChild(div)
 }
